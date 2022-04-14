@@ -28,7 +28,6 @@ public class FragmentEntertainment extends Fragment {
     AdapterListEntertainment adapterListEntertainment;
 
     RecyclerView rvEntertainment;
-    //AdapterListIntertainmentFake adapterListIntertainmentFake;
     SwipeRefreshLayout swipe_container;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -39,11 +38,8 @@ public class FragmentEntertainment extends Fragment {
     LayoutInflater layoutInflater;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.e("444", "зашел во FragmentEntertainment");
-
 
         viewGroupEntertainment = container;
         this.layoutInflater = inflater;
@@ -166,16 +162,6 @@ public class FragmentEntertainment extends Fragment {
         }, 1000);
 
     }
-
-//    private void getDateNews() {
-//        Log.e("444", "-зашел FragmentEntertainment getDateNews-");
-//
-//        for (int i = 0; i < 100; i++) {
-//            ((MainActivity)getActivity()).arrayListEntertainment.add(i + " развлечения");
-//        }
-//        adapterListIntertainmentFake.notifyDataSetChanged();
-//
-//    }
 
     private void getDateNews() {
         Log.e("444", "-зашел FragmentEntertainment getDateNews-");

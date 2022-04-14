@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.22ByteTest">
         <activity
-            android:name=".WebviewActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true">

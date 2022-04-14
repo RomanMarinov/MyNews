@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 public class ViewPager2Adapter extends FragmentStateAdapter {
 
-
     // переменная содержит фрагменты, к которым ViewPager2 позволяет нам переходить.
     private ArrayList<Fragment> fragments;
 
@@ -39,29 +38,4 @@ public class ViewPager2Adapter extends FragmentStateAdapter {
         //Log.e("444","ViewPager2Adapter вызвался setData fragments" + fragments.size());
     }
 
-
-//    public void hz()
-//    {
-//        ((MainActivity)context).setMyInterface(new MainActivity.MyInterface() {
-//            @Override
-//            public void methodMyInterface(int num) {
-//                numPosition = nu
-//            }
-//        });
-//
-//    }
-//
-//
-//    public void upDate(int numTab)
-//    {
-//        if(numTab == 0)
-//        {
-//            ((FragmentHome)fragments.get(numTab)).adapterListHomeFake.notifyDataSetChanged();
-//        }
-//        if(numTab == 1)
-//        {
-//            ((FragmentBusiness)fragments.get(numTab)).adapterListBusinessFake.notifyDataSetChanged();
-//        }
-//
-//    }
 }

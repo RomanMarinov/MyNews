@@ -42,13 +42,10 @@ public class FragmentSearch extends Fragment {
 
    // GET https://newsapi.org/v2/everything?q=bitcoin&apiKey=f725144c0220437d87363920fe7b20ba
 
-   View frag;
-   TextInputLayout textInputLayout;
    TextInputEditText textInputEditText;
    ImageView imgFragmentSearch;
    RecyclerView rvSearch;
    AdapterListSearch adapterListSearch;
-   ArrayList<ModelClass> arrayListArticles;
 
    ConstraintLayout constraintLayout;
    LinearLayout llTitle;
@@ -62,8 +59,6 @@ public class FragmentSearch extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.e("4444","-open FragmentSearch-");
         Log.e("4444","-open FragmentSearch getSupportFragmentManager().getBackStackEntryCount()-" + getActivity().getSupportFragmentManager().getBackStackEntryCount());
-
-
 
         this.viewGroupSearch = container;
         this.layoutInflater = inflater;
@@ -131,8 +126,6 @@ public class FragmentSearch extends Fragment {
         return view;
     }
 
-
-
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         Log.e("4444", "-зашел FragmentSearch onConfigurationChanged-");
@@ -147,16 +140,12 @@ public class FragmentSearch extends Fragment {
         super.onConfigurationChanged(newConfig);
         Log.e("4444","-open onConfigurationChanged FragmentSearch getSupportFragmentManager().getBackStackEntryCount()-" + getActivity().getSupportFragmentManager().getBackStackEntryCount());
 
-
-
     }
 
     // метод для установки recyclerview, GridLayoutManager и AdapterListHome
     public void myRecyclerLayoutManagerAdapter(View view, int column, int lastVisableItem) {
 
         rvSearch = view.findViewById(R.id.rvSearch);
-
-
         rvSearch.setHasFixedSize(false);
 
         staggeredGridLayoutManager = new StaggeredGridLayoutManager(column, StaggeredGridLayoutManager.VERTICAL);
@@ -183,7 +172,6 @@ public class FragmentSearch extends Fragment {
                 }
             }
         }, 500);
-
     }
 
     public void getDataSearchNews(String q)

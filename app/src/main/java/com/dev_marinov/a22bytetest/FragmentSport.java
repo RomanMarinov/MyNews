@@ -24,10 +24,7 @@ import retrofit2.Response;
 
 public class FragmentSport extends Fragment {
     AdapterListSport adapterListSport;
-
     RecyclerView rvSport;
-
-    //AdapterListSportFake adapterListSportFake;
     SwipeRefreshLayout swipe_container;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -168,16 +165,6 @@ public class FragmentSport extends Fragment {
         }, 1000);
 
     }
-
-//    private void getDateNews() {
-//        Log.e("444", "-зашел FragmentSport getDateNews-");
-//
-//        for (int i = 0; i < 100; i++) {
-//            ((MainActivity)getActivity()).arrayListSport.add(i + " спорт");
-//        }
-//        Log.e("444", "-зашел FragmentSport getDateNews arrayListSport.size-" + ((MainActivity)getActivity()).arrayListSport.size());
-//        adapterListSportFake.notifyDataSetChanged();
-//    }
 
     private void getDateNews() {
         Log.e("444", "-зашел FragmentSport getDateNews-");

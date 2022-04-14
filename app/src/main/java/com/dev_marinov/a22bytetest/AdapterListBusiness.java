@@ -54,7 +54,6 @@ public class AdapterListBusiness extends RecyclerView.Adapter<AdapterListBusines
                 ((MainActivity)context).lastVisibleItemBusiness = getMaxPosition(lastVisibleItemPositions);
                // Log.e("zzz","-getMaxPosition=" + getMaxPosition(lastVisibleItemPositions));
             }
-
             private int getMaxPosition(int[] positions) {
                 int max = positions[0];
                 return max;
@@ -75,23 +74,14 @@ public class AdapterListBusiness extends RecyclerView.Adapter<AdapterListBusines
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 ((MainActivity)context).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         Log.e("676","click imgSearch");
-
                         ((MainActivity)context).flipCard("goWebviewActivity", arrayList.get(position).getUrl());
                         Log.e("676","click arrayList.get(position).getUrl()" + arrayList.get(position).getUrl());
-
-
                     }
                 });
-
-//                Intent intent = new Intent(context, WebviewActivity.class);
-//                intent.putExtra("url", arrayList.get(position).getUrl());
-//                context.startActivity(intent);
             }
         });
         // ОЧЕРЕДНОСТЬ VIEW ТУТ КАК В МАКЕТЕ
@@ -156,6 +146,4 @@ public class AdapterListBusiness extends RecyclerView.Adapter<AdapterListBusines
             time = itemView.findViewById(R.id.tvTime);
         }
     }
-
-
 }
