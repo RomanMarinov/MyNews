@@ -26,8 +26,6 @@ public class FragmentScience extends Fragment {
     AdapterListScience adapterListScience;
 
     RecyclerView rvScience;
-
-    //AdapterListScienceFake adapterListScienceFake;
     SwipeRefreshLayout swipe_container;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -60,20 +58,15 @@ public class FragmentScience extends Fragment {
         // раздуть соответствующий макет в зависимости от ориентации экрана
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             view = layoutInflater.inflate(R.layout.fragment_science, viewGroupScience, false);
-
             mySwipeOnRefreshListener(view); // метод Swipe чтобы обновлять данные вручную
             // метод для установки recyclerview, GridLayoutManager и AdapterListHome
             myRecyclerLayoutManagerAdapter(view, 1, ((MainActivity)getActivity()).lastVisibleItemScience);
-
             Log.e("444", "во FragmentScience ПОРТРЕТ");
         } else {
             view = layoutInflater.inflate(R.layout.fragment_science, viewGroupScience, false);
-
             mySwipeOnRefreshListener(view); // метод Swipe чтобы обновлять данные вручную
             // метод для установки recyclerview, GridLayoutManager и AdapterListHome
-
             myRecyclerLayoutManagerAdapter(view, 2, ((MainActivity)getActivity()).lastVisibleItemScience);
-
             Log.e("444", "во FragmentScience ЛАНШАФТ");
         }
 
@@ -84,7 +77,6 @@ public class FragmentScience extends Fragment {
         {
             Log.e("444", "FragmentScience arrayList.size()  НЕ ПУСТОЙ=");
         }
-
         return view; // в onCreateView() возвращаем объект View, который является корневым элементом разметки фрагмента.
     }
 
@@ -101,7 +93,6 @@ public class FragmentScience extends Fragment {
 //        viewGroup.addView(view);
         super.onConfigurationChanged(newConfig);
     }
-
 
     // передаем в параметт view initInterface() чтобы определить swipe_container в макете
     public void mySwipeOnRefreshListener(View view) {
@@ -142,7 +133,6 @@ public class FragmentScience extends Fragment {
         adapterListScience = new AdapterListScience(getContext(),
                 ((MainActivity)getActivity()).arrayListScience, rvScience);
         rvScience.setAdapter(adapterListScience);
-
         //adapterListTest.notifyDataSetChanged();
 
         new Handler().postDelayed(new Runnable() {
@@ -160,24 +150,10 @@ public class FragmentScience extends Fragment {
                 {
                     Log.e("444","-try catch FragmentScience 1 -" + e);
                 }
-
-
             }
         }, 500);
 
     }
-
-//    private void getDateNews() {
-//        Log.e("444", "-зашел FragmentScience getDateNews-");
-//
-//
-//
-//        for (int i = 0; i < 100; i++) {
-//            ((MainActivity)getActivity()).arrayListScience.add(i + " наука");
-//        }
-//        adapterListScienceFake.notifyDataSetChanged();
-//
-//    }
 
     private void getDateNews() {
         Log.e("444", "-зашел FragmentScience getDateNews-");
@@ -188,7 +164,6 @@ public class FragmentScience extends Fragment {
             public void onResponse(Call<News> call, Response<News> response) {
                 if(response.isSuccessful()) {
                     //Log.e("444","-responceHome-" + response);
-
                     try {
                         ((MainActivity)getActivity()).arrayListScience.addAll(response.body().getArticles());
                         adapterListScience.notifyDataSetChanged();
@@ -197,9 +172,6 @@ public class FragmentScience extends Fragment {
                     {
                         Log.e("444","-try catch FragmentScience respone -" + e);
                     }
-
-
-
                 }
             }
 

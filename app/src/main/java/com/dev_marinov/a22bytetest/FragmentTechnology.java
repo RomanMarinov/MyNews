@@ -25,10 +25,7 @@ import retrofit2.Response;
 
 public class FragmentTechnology extends Fragment {
     AdapterListTechnology adapterListTechnology;
-
     RecyclerView rvTechnology;
-
-    //AdapterListTechnologyFake adapterListTechnologyFake;
     SwipeRefreshLayout swipe_container;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -40,7 +37,6 @@ public class FragmentTechnology extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         Log.e("444", "-зашел FragmentTechnology-");
 
         viewGroupTechnology = container;
@@ -162,25 +158,10 @@ public class FragmentTechnology extends Fragment {
                     Log.e("444","-try catch FragmentTechnology 1 -" + e);
                 }
 
-
-
             }
         }, 500);
 
     }
-
-//    private void getDateNews() {
-//        Log.e("444", "-зашел FragmentTechnology getDateNews-");
-//
-//        for (int i = 0; i < 100; i++) {
-//            ((MainActivity)getActivity()).arrayListTechnology.add(i + " технологии");
-//        }
-//        adapterListTechnologyFake.notifyDataSetChanged();
-//
-//    }
-
-
-
 
     private void getDateNews() {
         Log.e("444", "-зашел FragmentTechnology getDateNews-");

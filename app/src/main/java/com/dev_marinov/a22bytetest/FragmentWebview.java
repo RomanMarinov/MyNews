@@ -28,10 +28,8 @@ public class FragmentWebview extends Fragment{
     Handler handler;
     String myUrl;
 
-/////////////////////////////
-    //private List<String> previous = new ArrayList<String>();
     private String mLastUrl;
-////////////////////////////
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,7 +53,6 @@ public class FragmentWebview extends Fragment{
             }
         });
 
-///////////////////////////////////
         webView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -72,45 +69,12 @@ public class FragmentWebview extends Fragment{
                 return false;
             }
         });
-//////////////////////////////////////
-
-
-
-
-
-
-
 
         return frag;
     }
 
-
-
-
-
-
     public void setParam(String url)
     {
         myUrl = url;
-        //myUrl = "https://yandex.ru/";
     }
-
-
-
-
-
 }
-
-
-
-//    @Override
-//    public void onBackPressed() {
-//        Log.e("DebugDebug", "onBackPressed");
-//        int size = previous.size();
-//        if (size > 0){
-//            webview.loadUrl(previous.get(size - 1));
-//            previous.remove(size - 1);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }

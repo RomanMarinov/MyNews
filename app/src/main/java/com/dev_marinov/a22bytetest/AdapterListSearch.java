@@ -58,11 +58,6 @@ public class AdapterListSearch extends RecyclerView.Adapter<AdapterListSearch.Vi
                 return max;
             }
         });
-
-
-
-
-
     }
 
     @NonNull
@@ -70,22 +65,10 @@ public class AdapterListSearch extends RecyclerView.Adapter<AdapterListSearch.Vi
     public AdapterListSearch.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.rv_item_list, null, false);
         return new ViewHolder(view);
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterListSearch.ViewHolder holder, int position) {
-
-       // Log.e("333","-holder-" + holder + "-position-" + position);
-//        holder.cardView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, WebviewActivity.class);
-//                intent.putExtra("url", arrayList.get(position).getUrl());
-//                context.startActivity(intent);
-//            }
-//        });
-
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,16 +84,8 @@ public class AdapterListSearch extends RecyclerView.Adapter<AdapterListSearch.Vi
 
                     }
                 });
-
-
-//                Intent intent = new Intent(context, WebviewActivity.class);
-//                intent.putExtra("url", arrayList.get(position).getUrl());
-//                context.startActivity(intent);
-
             }
         });
-
-
 
         // ОЧЕРЕДНОСТЬ VIEW ТУТ КАК В МАКЕТЕ
         // установка текста заголовка
@@ -138,7 +113,6 @@ public class AdapterListSearch extends RecyclerView.Adapter<AdapterListSearch.Vi
             holder.content.setVisibility(View.GONE);
         }
 
-
         // установка автора. если автор нул, то view - gone
         if(arrayList.get(position).getAuthor() != null)
         {
@@ -153,7 +127,6 @@ public class AdapterListSearch extends RecyclerView.Adapter<AdapterListSearch.Vi
         holder.time.setText("опубликовано: " + arrayList.get(position).getPublishedAt()); // -----> дата
 
     }
-
 
     @Override
     public int getItemCount() {

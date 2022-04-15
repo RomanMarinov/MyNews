@@ -27,7 +27,6 @@ public class FragmentHealth extends Fragment {
     AdapterListHealth adapterListHealth;
 
     RecyclerView rvHealth;
-    //AdapterListHealthFake adapterListHealthFake;
     SwipeRefreshLayout swipe_container;
     StaggeredGridLayoutManager staggeredGridLayoutManager;
 
@@ -39,7 +38,6 @@ public class FragmentHealth extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         Log.e("444", "зашел во FragmentHealth");
 
         Log.e("444","FragmentHealth getSupportFragmentManager().getBackStackEntryCount()="
@@ -102,7 +100,6 @@ public class FragmentHealth extends Fragment {
         super.onConfigurationChanged(newConfig);
     }
 
-
     // передаем в параметт view initInterface() чтобы определить swipe_container в макете
     public void mySwipeOnRefreshListener(View view) {
         // обновление данных при свайпе
@@ -144,7 +141,6 @@ public class FragmentHealth extends Fragment {
                 ((MainActivity)getActivity()).arrayListHealth, rvHealth);
         rvHealth.setAdapter(adapterListHealth);
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -160,23 +156,10 @@ public class FragmentHealth extends Fragment {
                 {
                     Log.e("444","-try catch FragmentHealth 1 -" + e);
                 }
-
-
             }
-        }, 1000);
+        }, 500);
 
     }
-
-//    private void getDateNews() {
-//        Log.e("444", "-зашел FragmentHealth getDateNews-");
-//
-//        for (int i = 0; i < 2; i++) {
-//            ((MainActivity)getActivity()).arrayListHealth.add(i + " здоровье");
-//        }
-//        adapterListHealthFake.notifyDataSetChanged();
-//
-//    }
-
 
     private void getDateNews() {
         Log.e("444", "-зашел FragmentHealth getDateNews-");
