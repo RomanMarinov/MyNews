@@ -171,7 +171,7 @@ public class FragmentTechnology extends Fragment {
             @Override
             public void onResponse(Call<News> call, Response<News> response) {
                 if(response.isSuccessful()) {
-                    // Log.e("444","-responceHome-" + response);
+                     Log.e("444","-responceTechnology-" + response);
                     try {
                         ((MainActivity)getActivity()).arrayListTechnology.addAll(response.body().getArticles());
                         adapterListTechnology.notifyDataSetChanged();
@@ -180,18 +180,12 @@ public class FragmentTechnology extends Fragment {
                     {
                         Log.e("444","-try catch FragmentTechnology respone-" + e);
                     }
-
-
                 }
             }
-
             @Override
             public void onFailure(Call<News> call, Throwable t) {
                 Log.e("444","-responceHomeonFailure-" + t);
             }
         });
-
     }
-
-
 }

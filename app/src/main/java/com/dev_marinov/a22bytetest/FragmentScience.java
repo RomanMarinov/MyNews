@@ -163,7 +163,7 @@ public class FragmentScience extends Fragment {
             @Override
             public void onResponse(Call<News> call, Response<News> response) {
                 if(response.isSuccessful()) {
-                    //Log.e("444","-responceHome-" + response);
+                    Log.e("444","-responceScienece-" + response);
                     try {
                         ((MainActivity)getActivity()).arrayListScience.addAll(response.body().getArticles());
                         adapterListScience.notifyDataSetChanged();

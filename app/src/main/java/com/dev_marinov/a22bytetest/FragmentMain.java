@@ -174,7 +174,7 @@ public class FragmentMain extends Fragment {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                Log.e("4445","viewPager2 onPageScrollStateChanged =" + state);
+               // Log.e("4445","viewPager2 onPageScrollStateChanged =" + state);
                 super.onPageScrollStateChanged(state);
             }
         });
